@@ -53,7 +53,7 @@ int dirwalk(char *path, char **files, int *count) {
         }
 
         if (match_type(&sb)) {
-            files[*count] = strdup(fullpath);
+            files[*count] = strdup(dir->d_name);
             if(files[*count] == NULL)  {
                 perror("strdup");
                 exit(EXIT_FAILURE);

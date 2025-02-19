@@ -61,9 +61,9 @@ int dirwalk(char *path, char **files, int *count) {
             (*count)++;
         }
 
-        if(S_ISDIR(sb.st_mode)) {
-            dirwalk(fullpath, files, count);
-        }
+        // if(S_ISDIR(sb.st_mode)) {
+        //     dirwalk(fullpath, files, count);
+        // }
     }
     closedir(d);
     return 0;

@@ -1,5 +1,10 @@
-../../dirwalk: lab1.c
-	gcc -Wall -o ../../dirwalk lab1.c
+CC = gcc
+CFLAGS = -Wall
+OUT_DIR = ../../
+OUTPUT = dirwalk
+
+$(OUT_DIR)$(OUTPUT): lab1.c
+	$(CC) $(CFLAGS) -o $(OUT_DIR)$(OUTPUT) lab1.c
 
 clean: 
-	rm -f ../../dirwalk
+	rm -f $(OUT_DIR)$(OUTPUT)

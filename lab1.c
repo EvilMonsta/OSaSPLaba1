@@ -47,7 +47,7 @@ int dirwalk(char *path, char **files, int *count) {
 
         snprintf(fullpath, sizeof(fullpath), "%s/%s", path, dir->d_name);
 
-        if (lstat(fullpath, &sb) == -1) {
+        if (stat(fullpath, &sb) == -1) {
             perror("lstat");
             continue;
         }
